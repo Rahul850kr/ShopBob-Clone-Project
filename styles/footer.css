@@ -1,0 +1,61 @@
+.footersec1 {
+    margin: 40px auto 0;
+    text-align: center;
+    display: table;
+    font-size: 12px;
+    height: 262px;
+    width: 1024px;
+
+  }
+  .a {
+    list-style: none;
+    text-align: left;
+    vertical-align: top;
+    display: inline-block;
+    width: 18%;
+    margin-left: 0;
+    padding: 0;
+    margin: 0;
+  }
+  .footerlist {
+    font-size: 11px;
+    font-weight:bolder;
+    letter-spacing: 0.5px;
+    color: black;
+  }
+  .f1{
+    line-height: 24px;
+    font-size: 12px;
+    cursor: pointer;
+  }
+  .f1:hover {
+    font-weight: 700;
+    font-size: 12px;
+
+  }
+  .cp {
+    margin-top: 58px;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+  }
+  .privacy{
+    text-decoration: underline;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  .footerend{
+    margin-top: 10px;
+    margin-bottom: 0px;
+    cursor: pointer;
+  }
+  *{
+    font-family: 'DM Sans', sans-serif;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    
+  }
+  a{
+    text-decoration: none;
+    color: black;
+  }
