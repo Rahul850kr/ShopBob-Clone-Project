@@ -99,6 +99,7 @@ cursor: pointer;
     cursor: pointer;
 }
 #second-section{
+    /* display: flex; */
     width: 80%;
     margin: auto;
     margin-top: 60px;
@@ -109,7 +110,7 @@ cursor: pointer;
     grid-template-columns: repeat(8,1fr);
     gap: 15px;
     border: 1px solid black;
-    overflow-y: scroll;
+    /* overflow:scroll; */
 }
 #image-container img{
     height: 200px;

@@ -495,23 +495,19 @@
             description:
                 "Pleated Wrap Skirt",
         },
-
+        
     ];
-
-
-
-
-
-
-
-    let items_data = JSON.parse((localStorage.getItem("items"))) || [];
-
+    
+    
+    
+    let items_data = JSON.parse(localStorage.getItem("items")) || [];
+    
     appendData(prod_data)
     function appendData(data) {
         data.map(function (elem) {
             let box = document.createElement("div");
             box.setAttribute("id", "mainbox")
-
+            
             let Image = document.createElement("img");
             Image.src = elem.images;
 
@@ -520,12 +516,12 @@
 
             let Price = document.createElement("p");
             Price.innerText = elem.price;
-
+            
             let Description = document.createElement("p");
             Description.innerText = elem.description;
-
+            
             box.addEventListener("click", function () {
-            localStorage.setItem("relatedItems",JSON.stringify(reletedData));
+                localStorage.setItem("relatedItems",JSON.stringify(reletedData));
                 storeData(elem);
 
             });
@@ -543,6 +539,6 @@
         localStorage.setItem("items", JSON.stringify(items_data));
         window.location.href = "description.html"
     }
-
+    
 
 </script>
