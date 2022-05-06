@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopbop Registration</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script> 
+</head>
+<body >
+    <div id ="container">
+        <div class="logo">
+            <img src="https://m.media-amazon.com/images/G/01/Shopbop/p/pcs/shopbop/media/3/images/logos/AUI_desktop_SB_rebrand_1-0.png._CB485948808_.png" id="logo">
+        </div>
+        <div id="credentialError"></div>
+        <p id ="usr"></p>
+        <div class="content-box">
+            <div>
+                <h1>Create Account</h1>
+                <div class="field">
+                    <label>Your Name</label><br>
+                    <input type="text" id="urName" class="fld">
+                </div><br>
+                <div class="field">
+                    <label>Email</label><br>
+                    <input type="email" id="urEmail" class="fld">
+                </div><br>
+                <div class="field">
+                    <div id="psParent">
+                        <div class="ps"><label>Password</label></div>
+                    </div>
+                    <input type="password" class="fld" id="pswd" placeholder="At least 6 characters">
+                    <div class="ps">Passwords must be at least 6 characters.</div>
+                    <br>
+                </div>
+                <div class="field">
+                    <div id="psParent">
+                        <div class="ps"><label>Re-enter Password</label></div>
+                    </div>
+                    <input type="password" class="fld" id="rptPswd"><br><br>
+                </div>
+                <input type="button" value="Create Acccount" class="btn redBtn" id="createAcBtn" onclick="SignUp()"><br><br>
+                <span>By creating an account, you agree to our Privacy Notice and Conditions of Use</span><br>
+            </div><br>
+            <div id="box2">
+                <div id="centerContent">
+                    <div>Other register options</div><br>
+                    <input type="image" src="https://images-na.ssl-images-amazon.com/images/G/01/Shopbop/media/images/authportal/lwa_209x48._CB485945402_.png" class="amzn">
+            </div><br>
+        </div>
+    </div>
+    <div id="bottomBox">
+        <div id="btmSubBox1">
+            <a>Contact Us</a>
+        </div>
+        <div id="btmSubBox2">
+            <span>© 1999-2020 BOP LLC. All rights reserved. Privacy notice Conditions of Use</span>
+        </div>
+    </div>
+</body>
+</html>

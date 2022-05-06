@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopbop Sign In</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script> 
+</head>
+<body>
+    <div id ="container">
+        <div class="logo">
+            <img src="https://m.media-amazon.com/images/G/01/Shopbop/p/pcs/shopbop/media/3/images/logos/AUI_desktop_SB_rebrand_1-0.png._CB485948808_.png" id="logo">
+        </div>
+        <div id="credentialError"></div>
+        <p id ="usr"></p>
+        <div class="content-box">
+            <div id="signIn">
+                <h1>Sign-In</h1>
+                <div class="field">
+                    <label>Email</label><br>
+                    <input type="text" id="userId" class="fld">
+                </div>
+                <div id="userIdErrorMsgBox"></div><br>
+                <div class="field">
+                    <div id="psParent">
+                        <div class="ps"><label>Password</label></div>
+                        <div class="ps"><a href="https://www.shopbop.com/ap/forgotpassword?clientContext=130-0947824-8417460&showRememberMe=true&openid.pape.max_auth_age=1800&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&siteState=g4X0U6VneKxPJVmqR6wb5u4X6yH%2FPMJtZIYlg8884l6fAAAAAQAAAABicRxYcmF3AAAAAD1aGrfyIF6IE%2BJ7i%2Fa6ow%3D%3D%7Chttps%3A%2F%2Fwww.shopbop.com%3A443%2F%3Fgclid%3DEAIaIQobChMI54Pi66bD9wIVChwrCh1n6gSkEAAYASAAEgJZM_D_BwE%26extid%3DPS_Google_usa%26ef_id%3DEAIaIQobChMI54Pi66bD9wIVChwrCh1n6gSkEAAYASAAEgJZM_D_BwE%3AG%3As%26s_kwcid%3DAL%213510%213%21377252344235%21e%21%21g%21%21shopbop%21112669709%215129319989&marketPlaceId=A2817T8MKXE20N&language=en_US&pageId=shopbop-desktop&openid.return_to=https%3A%2F%2Fwww.shopbop.com%3A443%2Fauth%2Fafter%2Fauthportal&prevRID=BAFGA38TXJ6Y5V02DH3B&openid.assoc_handle=shopbop_us_aui&openid.mode=checkid_setup&prepopulatedLoginId=&failedSignInCount=0&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0">Forgot your password?</a></div>
+                    </div>
+                    <input type="password" class="fld" id="pswd"><br>
+                </div>
+                <div id="pswdErrorMsgBox"></div><br>      
+                <input type="button" value="Sign-In" class="btn redBtn" id="signInBtn" onclick="validateCredentials()"><br><br>
+            </div>
+            <div id="box2">
+                <div class="field">
+                    <input type="checkbox">Keep me signed in. <a href="">Details</a>
+                </div><br>
+                <div id="centerContent">
+                    <div>More sign in options</div><br>
+                    <input type="image" src="https://images-na.ssl-images-amazon.com/images/G/01/Shopbop/media/images/authportal/lwa_209x48._CB485945402_.png" class="amzn">
+            </div><br>
+            <div id="centerContent">
+                <div>New to Shopbop?</div><br>
+                <input type="button" value="Create your Shopbop account" class="btn blackBtn" onclick="redirectPage()">
+            </div>
+        </div>
+    </div>
+    <div id="bottomBox">
+        <div id="btmSubBox1">
+            <a>Contact Us</a>
+        </div>
+        <div id="btmSubBox2">
+            <span>© 1999-2020 BOP LLC. All rights reserved. Privacy notice Conditions of Use</span>
+        </div>
+    </div>
+</body>
+</html>
