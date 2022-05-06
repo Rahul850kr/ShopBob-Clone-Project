@@ -33,7 +33,9 @@
 
 }
 #main-left>#main-img{
+    margin-left: 10px;
     width: 100%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 #main-right{
     width: 45%;
@@ -98,22 +100,73 @@ cursor: pointer;
     color: #646262;
     cursor: pointer;
 }
-#second-section{
-    /* display: flex; */
+.h2{
     width: 80%;
-    margin: auto;
-    margin-top: 60px;
+    padding-left: 10%;
+    margin-top: 50px;
 }
+#second-section{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.swiper{
+    width: 80%;
+    
+}
+.swiper-wrapper{
+    display: flex;
+    width: 70%;
+}
+.swiper-slide{
+    margin: auto;
+    width: 90%;
+    display: flex;
+    gap: 15px;
+    text-align: center;
+    
+}
+.swiper-slide img:hover{
+    width: 93%;
+    height: 210px;
+    
+}
+.swiper-slide img{
+    width: 100%;
+    height: 200px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+
+    
+}
+.swiper-button-prev{
+    background-color: rgb(241, 68, 68);
+    color: white;
+    width: 4%;
+    font-size: 20px;
+    border-radius: 30%;
+}
+.swiper-button-next{
+    
+    background-color: rgb(241, 68, 68);
+    color: white;
+    width: 4%;
+    font-size: 20px;
+    border-radius: 30%;
+}
+
 #image-container{
     width: 100%;
-    display: grid;
-    grid-template-columns: repeat(8,1fr);
+    display: flex;
     gap: 15px;
-    border: 1px solid black;
-    /* overflow:scroll; */
 }
 #image-container img{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+
     height: 200px;
+    width: 100%;
 }
 #image-container img{
     background-color: gray;
@@ -121,20 +174,12 @@ cursor: pointer;
 #image-container img:hover{
     width: 100%;
     height: 209px;
-
-}
+} 
 
 #third-section{
     width: 80%;
     margin: auto;
     margin-top: 60px;
-}
-#image-container{
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(8,1fr);
-    gap: 15px;
-    border: 1px solid black;
 }
 
 #about-designer-section{

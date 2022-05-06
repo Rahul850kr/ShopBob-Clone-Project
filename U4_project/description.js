@@ -1,31 +1,34 @@
 
 
+import {navbar} from "../component/navbar.js"
+
+let navbar=document.getElementById("navbar").innerHTML=navbar()
+
+//  script For slide show 
+const swiper = new Swiper('.swiper', {
+
+    loop: true,
+  
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+    },
+  
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  
+  });
 
 
-// sending related data in local storage
-
-// let related_items_data=JSON.parse((localStorage.getItem("relatedItems"))) ||  [];
-
-// // appending related data in might like box 
-// let relatedBigBox=document.getElementById("image-container");
-// // related_items_data.forEach(function(e){
-//     let box=document.createElement("div")
-//     box.setAttribute("class","carousel-cell")
-
-//     let img=document.createElement("img")
-//     img.setAttribute("class","r1")
-
-//     img.src=related_items_data.images
-
-//     box.append(img)
-//     relatedBigBox.append(box)
-// })
-    
 
 
+
+  // geting add to bag date from local storage
 let adItems=JSON.parse(localStorage.getItem("addToCartData"))||[]
 console.log(adItems)
-// sending main data in local storage
 
 let cartData = JSON.parse(localStorage.getItem("items")) || []
 console.log(cartData)
@@ -42,6 +45,8 @@ cartData.map(function (e) {
     let small_div = document.getElementsByClassName("small-left")
     let smallImg = document.getElementsByClassName("small-left")
 
+
+    // adding data in localstorage for add to bag
     let button=document.getElementById("btn-notify")
     button.addEventListener("click",function(){
         console.log("1")
@@ -57,34 +62,18 @@ cartData.map(function (e) {
 
 })
 
+// for pushing data in add to bag array then local storage
 function addToBag(e){
-    // event.preventDefault()
 
     adItems.push(e)
 
     localStorage.setItem("addToCartData",JSON.stringify(adItems))
 
-    // window.location.href=""
 }
 
 
-let related=JSON.parse(localStorage.getItem("relatedItems"))||[]
+import {footer} from "../component/footer.js"
 
-related.map(function(e){
-    let box=document.createElement("div")
+let footer=document.getElementById("footer").innerHTML=footer()
 
-    
-    let img=document.createElement("img")
-    img.src=e.images
-    
-    
-    let title=document.createElement("h3").innerText=e.title
-    
-    let price=document.createElement("p").innerText=e.price
-    
-    box.append(img,title,price)
-
-    document.getElementById("image-container").append(box)
-    
-})
 
