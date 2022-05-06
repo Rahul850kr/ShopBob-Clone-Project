@@ -1,0 +1,206 @@
+#poster{
+    height: 700px;
+    width:100%;
+    margin-top: 10px;
+}
+#poster img{
+    width: 100%;
+    height: 100%;
+}
+#head1{
+    margin-top: 20px;
+}
+#head2{
+    font-size: large;
+    font-weight: bold;
+    font-size: 24px;
+    margin-top: 10px;
+
+
+}
+#shop{
+    text-align: right;
+    margin-top: -25px;
+    text-decoration: underline;
+    color: brown;
+}
+#maindiv{
+    height: 100px;
+    width:70%;
+    margin: auto;
+}
+body{
+    font-family: "GT-America-Standard", "Helvetica Neue", Helvetica, sans-serif;
+}
+/* swipper */
+.swiper{
+    width: 90%;
+    margin-top:40px;
+}
+  .swiper-slide {
+
+    font-size: 12px;
+   text-align: center;
+
+    /* Center slide text vertically */
+    /* display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+
+    -webkit-box-pack:center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: baseline;
+    text-align:left;  */
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+   
+  }
+  /* END SWIPPER */
+  .header {
+  height: 50px;
+  width:60%;
+  margin:auto;
+  margin-top: 20px;
+  }
+  .shopAlink {
+    display: flex;
+    justify-content: space-between;
+  }
+  .header1 {
+    padding: 0px 0px 10px;
+    display: block;
+    margin: 0;
+    text-align: left;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-top: 20px;
+    font-size: 16px;
+    padding-left: 15px;
+  }
+  .header2 {
+    margin: 0;
+    padding: 0px 0px 5px;
+  
+    height: 45px;
+    font-weight: 900;
+    padding-left: 15px;
+  }
+  .shop {
+    height: 20px;
+    font-size: 15px;
+    padding-top: 10px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    text-align: right;
+    color: orangered;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  /* divimg */
+  .divimg{
+      text-align: center;
+  }
+  .divimg p{
+      font-weight: bolder;
+  }
+  /* container  */
+  #container
+  {
+     display:flex;
+     gap:5px;
+     width:100%;
+     margin:auto;
+     
+  }
+  #container div{
+      height:150;
+      
+     
+  }
+  #container div>img{
+      height: 300px;
+      width:100%;
+  }
+  #container div p{
+      color: orangered;
+      text-align: center;
+      text-decoration: underline;
+      font-weight: bolder;
+  }
+  /* poster2 */
+  #poster2 {
+      display:flex;
+      gap:40px;
+      width:100%;
+
+  }
+  #poster2 div img{
+
+  width:100%;
+
+  }
+  .overlap,
+  .overlap2 {
+    position: relative;
+    margin-top: -10%;
+    left: 20%;
+    width: 82%;
+    padding: 6%;
+    transition: margin-top 0.2s ease 0s, padding-bottom 0.2s ease 0s;
+    background-color: rgb(255, 255, 255);
+    box-sizing: border-box;
+    height: 200px;
+  }
+  .overlap:hover,
+  .overlap2:hover {
+    margin-top: -12%;
+  }
+  .a1,.b1 {
+    font-weight: bold;
+    font-style: normal;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    color: rgb(0, 0, 0);
+    margin: 0px;
+  }
+  .hr {
+    width: 15%;
+    margin: 12px 0px;
+    border: 1px solid #ee4a1b;
+  }
+  .a2,.b2{
+      font-size: larger;
+      font-weight: bolder;
+  }
+  #banner{
+      width:100%;
+      height: 170px;
+
+  }
+  #banner img{
+      width: 100%;
+      height: 100%;
+      
+  }
+  #end1{
+      height: 100px;
+      width:100%;
+  }
+  #end1 img{
+      width: 100%;
+      height: 100%;
+  }
+  #ship{
+      display: flex;
+      gap:10px;
+  }
