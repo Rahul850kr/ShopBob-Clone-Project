@@ -1,0 +1,134 @@
+@media screen and (min-width: 467px) {
+    .content-box {
+            width: 300px;
+            margin: auto;
+            padding: 0px 25px 25px 25px;
+        }
+        .content-box > * {
+            margin: 0px;
+            width: 300px;
+            font-weight: bold;
+            padding: 0px;
+        }
+    }
+    #credentialError {
+        margin: auto;
+        width: 300px;
+        border: solid 1px red;
+        display: none;
+        padding-left: 25px;
+        padding-right: 25px;
+        color: red;
+    }
+
+    #credentialError p {
+        color: black    ;
+    }
+
+    body {
+        background-color: #f0f0f0;
+    }
+    #otpErrorMsgBox {
+        color: red;
+    }
+
+    #userIdErrorMsgBox, #pswdErrorMsgBox, #credentialErrorBox {
+        color: red;
+        width: fit-content;
+        height: fit-content;
+        font-weight: normal;
+        display: none;
+    }
+
+    #container {
+        border-bottom: solid 1px #aba6a6;
+        padding-bottom: 1%;
+        width: 80%;
+        margin: auto;
+    }
+    * {
+        font-size: 12px;
+        font-family: Arial;
+    }
+    a {
+        text-decoration: none;
+        color: tomato;
+        font-weight: normal;
+    }
+    h1 {
+        font-size: 30px;
+        font-weight: normal;
+    }
+    #logo {
+        height: 50px;
+        width: 200px;
+        margin: auto;
+        display: block;
+        margin-bottom: 20px;
+    }
+    .fld {
+        width: 92%;
+        height: 31px;
+        border: 1px solid #a6a6a6;
+        border-radius: 3px;
+        padding: 0px 10px 0px 10px;
+    }
+    .fld:focus {
+        outline: none;
+        border: solid 1px rgb(236, 141, 58);
+    }
+    .btn {
+        width: 98%;
+        height: 31px;
+        border: 1px solid #a6a6a6;
+    }
+    .yellowBtn {
+        width: 100%;
+        border: solid 1px #8c8c8b;
+        background-image: linear-gradient(#ffe28a, #f7cc4f);
+        width: 100%;
+    }
+    .redBtn {
+        border: none;
+        background-color: tomato;
+        color: white;
+    }
+    .blackBtn {
+        width: 100%;
+        border: none;
+        background-color: black;
+        width: 100%;
+        color: white;
+    }
+    #psParent {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    #centerContent {
+        text-align: center;
+    }
+    #box2 {
+        font-weight: normal;
+        border-bottom: 1px grey; 
+    }
+    #bottomBox {
+        padding-top: 2%;
+        margin: 0px;
+        display: flex;
+        flex-direction: column;
+        line-height: 30px;
+    }
+    #bottomBox > * {
+        margin: auto;
+    }
+    #divBdr {
+        border-top: solid 1px rgb(205, 203, 203);
+        padding-top: 20px;
+    }
+    #usr {
+        color: black;
+    }
+    .cntr {
+        text-align: center;
+    }
