@@ -1,8 +1,13 @@
 
 
-import {navbar} from "../component/navbar.js"
+import {navbar} from "../components/navbar.js"
 
-let navbar=document.getElementById("navbar").innerHTML=navbar()
+document.getElementById("navbar").innerHTML=navbar()
+
+
+import {footer} from "../components/footer.js"
+
+document.getElementById("footer").innerHTML=footer()
 
 //  script For slide show 
 const swiper = new Swiper('.swiper', {
@@ -22,33 +27,30 @@ const swiper = new Swiper('.swiper', {
   
   });
 
-
-
-
-
   // geting add to bag date from local storage
-let adItems=JSON.parse(localStorage.getItem("addToCartData"))||[]
-console.log(adItems)
+  
+  let cartData = JSON.parse(localStorage.getItem("items"))||[]
+  // console.log(cartData)
+  
+  
+  cartData.map(function(e){
+    console.log("items",e)
+    let img_box = document.getElementById("main-img")
+    img_box.innerHTML=null
 
-let cartData = JSON.parse(localStorage.getItem("items")) || []
-console.log(cartData)
-
-cartData.map(function (e) {
-
-    let div;
-    div = document.getElementById("main-img")
-    let img = document.getElementById("image")
+    let img=document.createElement("img")
     img.src = e.images
 
+    img_box.append(img)
 
+    
 
     let small_div = document.getElementsByClassName("small-left")
     let smallImg = document.getElementsByClassName("small-left")
 
 
     // adding data in localstorage for add to bag
-    let button=document.getElementById("btn-notify")
-    button.addEventListener("click",function(){
+    let button=document.getElementById("btn-notify").addEventListener("click",function(){
         console.log("1")
         addToBag(e)
     })
@@ -61,6 +63,8 @@ cartData.map(function (e) {
 
 
 })
+    let adItems=JSON.parse(localStorage.getItem("addToCartData"))||[]
+    console.log(adItems)
 
 // for pushing data in add to bag array then local storage
 function addToBag(e){
@@ -72,8 +76,6 @@ function addToBag(e){
 }
 
 
-import {footer} from "../component/footer.js"
 
-let footer=document.getElementById("footer").innerHTML=footer()
 
 
