@@ -521,7 +521,6 @@
             Description.innerText = elem.description;
             
             box.addEventListener("click", function () {
-                localStorage.setItem("relatedItems",JSON.stringify(reletedData));
                 storeData(elem);
 
             });
@@ -533,6 +532,7 @@
 
         })
     }
+    
     function storeData(elem) {
         items_data.push(elem);
 

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentication required</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script> 
+</head>
+<body onload="authenticate()">
+    <div id ="container">
+        <div class="logo">
+            <img src="https://m.media-amazon.com/images/G/01/Shopbop/p/pcs/shopbop/media/3/images/logos/AUI_desktop_SB_rebrand_1-0.png._CB485948808_.png" id="logo">
+        </div>
+        <div id="credentialError"></div>
+        <p id ="usr"></p>
+        <div class="content-box">
+            <div id="signIn">
+                <h1>Verify email address</h1>
+                <p>To verify your email, we've sent a One Time Password (OTP) to <span id="mailId"></span></p>
+                <div class="field">
+                    <label>Enter OTP</label><br>
+                    <input type="text" id="otp" class="fld">
+                </div>
+                <div id="otpErrorMsgBox"></div><br>
+                <input type="button" value="Create your shopbop account" class="btn redBtn" id="signInBtn" onclick="verifyOtp()"><br>
+                <p>By creating an account, you agree to our Privacy Notice and Conditions of use.</p>
+            </div>
+            <div id="box2">
+                <div id="centerContent">
+                    <a href="">Resend OTP</a>
+            </div><br>
+        </div>
+    </div>
+    <div id="bottomBox">
+        <div id="btmSubBox1">
+            <a>Contact Us</a>
+        </div>
+        <div id="btmSubBox2">
+            <span>© 1999-2020 BOP LLC. All rights reserved. Privacy notice Conditions of Use</span>
+        </div>
+    </div>
+</body>
+</html>

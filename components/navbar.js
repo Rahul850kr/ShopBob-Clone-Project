@@ -28,16 +28,16 @@ function navbar(){
 
 <div id="nav2"><a href="home.html"><img src="https://m.media-amazon.com/images/G/01/Shopbop/p/pcs/shopbop/media/3/images/logos/rebrand_shopbop_logo_2x_1-3.png"/></div>
 <div id="nav3">
- <h4><a href="whatsnew.html">WHAT'S NEW</a></h4>
- <h4><a href="ourfavourites.html">OUR FOVOURITES</a></h4>
- <h4><a href="designers.html">DESIGNERS</a></h4>
- <h4><a href="clothing.html">CLOTHING</a></h4>
- <h4><a href="active.html">ACTIVE</a></h4>
- <h4><a href="shoes.html">SHOES</a></h4>
- <h4><a href="bags.html">BAGS</a></h4>
- <h4><a href="accessories.html">ACCESSORIES</a></h4>
- <h4><a href="men.html">MEN</a></h4>
- <h4><a href="sale.html">SALE</a></h4>
+ <h4><a href="#">WHAT'S NEW</a></h4>
+ <h4><a href="#">OUR FOVOURITES</a></h4>
+ <h4><a href="#">DESIGNERS</a></h4>
+ <h4><a href="product.html">CLOTHING</a></h4>
+ <h4><a href="#">ACTIVE</a></h4>
+ <h4><a href="#">SHOES</a></h4>
+ <h4><a href="#">BAGS</a></h4>
+ <h4><a href="#">ACCESSORIES</a></h4>
+ <h4><a href="#">MEN</a></h4>
+ <h4><a href="#">SALE</a></h4>
 <button> <i class="fas fa-search"></i></button>
 
 </div>

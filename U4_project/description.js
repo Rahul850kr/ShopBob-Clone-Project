@@ -1,49 +1,56 @@
 
 
+import {navbar} from "../components/navbar.js"
+
+document.getElementById("navbar").innerHTML=navbar()
 
 
-// sending related data in local storage
+import {footer} from "../components/footer.js"
 
-// let related_items_data=JSON.parse((localStorage.getItem("relatedItems"))) ||  [];
+document.getElementById("footer").innerHTML=footer()
 
-// // appending related data in might like box 
-// let relatedBigBox=document.getElementById("image-container");
-// // related_items_data.forEach(function(e){
-//     let box=document.createElement("div")
-//     box.setAttribute("class","carousel-cell")
+//  script For slide show 
+const swiper = new Swiper('.swiper', {
 
-//     let img=document.createElement("img")
-//     img.setAttribute("class","r1")
+    loop: true,
+  
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+    },
+  
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  
+  });
 
-//     img.src=related_items_data.images
+  // geting add to bag date from local storage
+  
+  let cartData = JSON.parse(localStorage.getItem("items"))||[]
+  // console.log(cartData)
+  
+  
+  cartData.map(function(e){
+    console.log("items",e)
+    let img_box = document.getElementById("main-img")
+    img_box.innerHTML=null
 
-//     box.append(img)
-//     relatedBigBox.append(box)
-// })
-    
-
-
-let adItems=JSON.parse(localStorage.getItem("addToCartData"))||[]
-console.log(adItems)
-// sending main data in local storage
-
-let cartData = JSON.parse(localStorage.getItem("items")) || []
-console.log(cartData)
-
-cartData.map(function (e) {
-
-    let div;
-    div = document.getElementById("main-img")
-    let img = document.getElementById("image")
+    let img=document.createElement("img")
     img.src = e.images
 
+    img_box.append(img)
 
+    
 
     let small_div = document.getElementsByClassName("small-left")
     let smallImg = document.getElementsByClassName("small-left")
 
-    let button=document.getElementById("btn-notify")
-    button.addEventListener("click",function(){
+
+    // adding data in localstorage for add to bag
+    let button=document.getElementById("btn-notify").addEventListener("click",function(){
         console.log("1")
         addToBag(e)
     })
@@ -56,35 +63,19 @@ cartData.map(function (e) {
 
 
 })
+    let adItems=JSON.parse(localStorage.getItem("addToCartData"))||[]
+    console.log(adItems)
 
+// for pushing data in add to bag array then local storage
 function addToBag(e){
-    // event.preventDefault()
 
     adItems.push(e)
 
     localStorage.setItem("addToCartData",JSON.stringify(adItems))
 
-    // window.location.href=""
 }
 
 
-let related=JSON.parse(localStorage.getItem("relatedItems"))||[]
 
-related.map(function(e){
-    let box=document.createElement("div")
 
-    
-    let img=document.createElement("img")
-    img.src=e.images
-    
-    
-    let title=document.createElement("h3").innerText=e.title
-    
-    let price=document.createElement("p").innerText=e.price
-    
-    box.append(img,title,price)
-
-    document.getElementById("image-container").append(box)
-    
-})
 
