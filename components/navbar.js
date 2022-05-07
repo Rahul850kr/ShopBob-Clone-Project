@@ -31,7 +31,7 @@ function navbar(){
  <h4><a href="#">WHAT'S NEW</a></h4>
  <h4><a href="#">OUR FOVOURITES</a></h4>
  <h4><a href="#">DESIGNERS</a></h4>
- <h4><a href="product.html">CLOTHING</a></h4>
+ <h4><a href="../product.html">CLOTHING</a></h4>
  <h4><a href="#">ACTIVE</a></h4>
  <h4><a href="#">SHOES</a></h4>
  <h4><a href="#">BAGS</a></h4>
