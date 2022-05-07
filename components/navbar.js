@@ -10,9 +10,9 @@ function navbar(){
     <div id="sec3"><h4><a href="../Sreehari's module/signin.html">Sign In</a>/<a href="../Sreehari's module/Signup.html"> Register</a><i class="fa-solid fa-angle-down"></i></h4>
         <div class="dropmenu-content">
             <a href="#">Account</a>
-            <a href="oreder.html">Orders</a>
-            <a href="wishlist.html">My wishlist</a>
-            <a href="designers.html">My designers</a>
+            <a href="#">Orders</a>
+            <a href="#">My wishlist</a>
+            <a href="#">My designers</a>
         </div>
       
 
@@ -21,7 +21,7 @@ function navbar(){
 
  <div id="wish">
         <a href="wishlist.html"><img src="https://m.media-amazon.com/images/G/01/Shopbop/p/pcs/_global/images/topnav/rebrand-hearts_1-0.png"/></a>
-   <a href="cart.html"> <img src="https://m.media-amazon.com/images/G/01/Shopbop/p/pcs/_global/images/topnav/bag_1-0.png"/></a><span id="count"></span>
+   <a href="../cart.html"> <img src="https://m.media-amazon.com/images/G/01/Shopbop/p/pcs/_global/images/topnav/bag_1-0.png"/></a><span id="count"></span>
 
 </div>
 </div>
