@@ -5,9 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/ShopBob-Clone-Project/styles/navbar.css">
+    <link rel="stylesheet" href="styles/navbar.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="/ShopBob-Clone-Project/styles/footer.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <script src="https://kit.fontawesome.com/528dc9034e.js" crossorigin="anonymous"></script>
+
     <style>
         #main_div{
             width:80%;
@@ -141,7 +143,7 @@
     <div id="main_div" >
         <div id="add_details" >
             <div id="Review" >Review Order</div>
-            <a href="/ShopBob-Clone-Project/address.html" >
+            <a href="address.html" >
                 <div class="add" >
                 <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48Y2lyY2xlIGZpbGw9IiNFRTRBMUIiIGN4PSI5IiBjeT0iOSIgcj0iOSIvPjxwYXRoIGZpbGw9IiNGRkYiIGZpbGwtcnVsZT0ibm9uemVybyIgZD0iTTEzIDkuNjRIOS44M1YxM0g4LjE1NFY5LjY0SDVWOC4xNTZoMy4xNTNWNUg5LjgzdjMuMTU2SDEzeiIvPjwvZz48L3N2Zz4K" alt="">
                 <span>Add Shipping Address</span>
@@ -203,7 +205,8 @@
 
 <script type="module" >
     import {navbar} from "./components/navbar.js";
-    import {footer} from "./components/footer.js"
+    import {footer} from "./components/footer.js";
+    
     console.log(footer);
     document.querySelector("#navbar").innerHTML=navbar()
     document.querySelector("#footer").innerHTML=footer();
