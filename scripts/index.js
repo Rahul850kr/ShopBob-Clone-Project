@@ -2,6 +2,12 @@
 import { navbar } from "../components/navbar.js";
 let n=document.getElementById("navbar");
 n.innerHTML=navbar();
+var data1 = JSON.parse(localStorage.getItem("addToCartData"));
+
+console.log(data1)
+
+let len = data1.length;
+document.getElementById("count").innerText=len;
 
 // imported footer;
 import { footer } from "../components/footer.js";

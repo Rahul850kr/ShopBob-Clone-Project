@@ -440,6 +440,12 @@
 <script type="module" >
     import {navbar} from "./components/navbar.js";
     import {footer} from "./components/footer.js";
+    var data1 = JSON.parse(localStorage.getItem("addToCartData"));
+
+console.log(data1)
+
+let len = data1.length;
+document.getElementById("count").innerText=len;
     //console.log(navbar);
     document.querySelector("#navbar").innerHTML=navbar()
     document.querySelector("#footer").innerHTML=footer();
