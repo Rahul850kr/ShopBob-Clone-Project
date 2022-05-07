@@ -53,7 +53,7 @@
     function login(value, urName) {
       localStorage.setItem("loggedUsr", value);
       localStorage.setItem("loggedUsrName", urName);
-      location.replace("Shopbop logged in.html");
+      location.replace("../index.html");
     }
 
     //redirects the page on button click

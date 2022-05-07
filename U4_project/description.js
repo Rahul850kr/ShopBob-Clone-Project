@@ -9,6 +9,10 @@ import {footer} from "../components/footer.js"
 
 document.getElementById("footer").innerHTML=footer()
 
+let adItems=JSON.parse(localStorage.getItem("addToCartData"))||[]
+console.log(adItems)
+
+
 //  script For slide show 
 const swiper = new Swiper('.swiper', {
 
@@ -63,15 +67,14 @@ const swiper = new Swiper('.swiper', {
 
 
 })
-    let adItems=JSON.parse(localStorage.getItem("addToCartData"))||[]
-    console.log(adItems)
-
+   
 // for pushing data in add to bag array then local storage
 function addToBag(e){
 
     adItems.push(e)
 
-    localStorage.setItem("addToCartData",JSON.stringify(adItems))
+    localStorage.setItem("addToCartData",JSON.stringify(adItems));
+   
 
 }
 

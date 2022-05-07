@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/528dc9034e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../styles/footer.css">
     <style>
         #prod_container {
@@ -525,7 +526,7 @@
     
     
     
-    let items_data = JSON.parse(localStorage.getItem("items")) || [];
+    let items_data =[];
     
     appendData(prod_data)
     function appendData(data) {
@@ -546,7 +547,7 @@
             Description.innerText = elem.description;
             
             box.addEventListener("click", function () {
-                localStorage.setItem("relatedItems",JSON.stringify(reletedData));
+                localStorage.setItem("items",JSON.stringify(items_data));
                 storeData(elem);
 
             });
@@ -560,9 +561,8 @@
     }
     function storeData(elem) {
         items_data.push(elem);
-
         localStorage.setItem("items", JSON.stringify(items_data));
-        window.location.href = "description.html"
+        window.location.href = "./U4_project/description.html"
     }
     
 
