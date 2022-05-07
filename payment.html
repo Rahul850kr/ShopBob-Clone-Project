@@ -5,9 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/ShopBob-Clone-Project/styles/navbar.css">
+    <link rel="stylesheet" href="/styles/navbar.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="/ShopBob-Clone-Project/styles/footer.css">
+    <link rel="stylesheet" href="/styles/footer.css">
+    <script src="https://kit.fontawesome.com/528dc9034e.js" crossorigin="anonymous"></script>
     <style>
         #main_div{
             width:30%;
@@ -85,7 +86,7 @@
                 <span>Card Number</span>
             </div>
             <div class="bottom" >
-                <input type="Number" required placeholder="Card Number" id="card_number" >
+                <input type="password" required placeholder="Card Number" id="card_number" >
             </div>
             <div class="names" >
                 <span>Expiry</span>
@@ -99,7 +100,7 @@
                         <span>Enter CVV</span>
                     </div>
                     <div class="city_div" >
-                        <input type="number" required placeholder="3 digits on back" id="cvv" class="font" >
+                        <input type="password" required placeholder="3 digits on back" id="cvv" class="font" >
                     </div>
                 </div>
                 <div>
@@ -109,9 +110,7 @@
                     <div class="state_div" >
                         <input type="number" required placeholder="enter your zip code" id="zip" class="font" >
                     </div>
-                </div>
-
-                
+                </div> 
             </div>
             <div id="submitdiv" >
                 <input type="submit" id="submit" value="Complete your Purchase" >
@@ -129,4 +128,12 @@
     console.log(navbar);
     document.querySelector("#navbar").innerHTML=navbar();
     document.querySelector("#footer").innerHTML=footer();
+
+    let form=document.querySelector("form");
+    
+    let MyCode=()=>{
+        event.preventDefault();
+        window.location.href="./checkout.html"
+    }
+    form.addEventListener("submit",MyCode);
 </script>

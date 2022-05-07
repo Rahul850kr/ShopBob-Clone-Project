@@ -87,6 +87,11 @@
         #logo{
             width: 200px;
         }
+        #add{
+            padding: 30px 20px;
+            cursor: pointer;
+            margin-bottom: 5px;
+        }
         .add{
             padding: 30px 20px;
             cursor: pointer;
@@ -129,7 +134,20 @@
             text-decoration: none;
             color:black
         }
-        
+        #products>div{
+            display: flex;
+            margin-bottom: 20px;
+        }
+        #products>div>img{
+            height:150px
+        }
+        .addbold{
+            font-weight: bold;
+        }
+        #products{
+            height:400px;
+            overflow: scroll;
+        }
 
 
     </style>
@@ -144,20 +162,20 @@
         <div id="add_details" >
             <div id="Review" >Review Order</div>
             <a href="address.html" >
-                <div class="add" >
+                <div id="add" >
                 <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48Y2lyY2xlIGZpbGw9IiNFRTRBMUIiIGN4PSI5IiBjeT0iOSIgcj0iOSIvPjxwYXRoIGZpbGw9IiNGRkYiIGZpbGwtcnVsZT0ibm9uemVybyIgZD0iTTEzIDkuNjRIOS44M1YxM0g4LjE1NFY5LjY0SDVWOC4xNTZoMy4xNTNWNUg5LjgzdjMuMTU2SDEzeiIvPjwvZz48L3N2Zz4K" alt="">
                 <span>Add Shipping Address</span>
-            </div>
+                </div>
             </a>
-            <a href="/ShopBob-Clone-Project/payment.html" >
+            <a href="./payment.html" >
                 <div class="add" >
                 <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48Y2lyY2xlIGZpbGw9IiNFRTRBMUIiIGN4PSI5IiBjeT0iOSIgcj0iOSIvPjxwYXRoIGZpbGw9IiNGRkYiIGZpbGwtcnVsZT0ibm9uemVybyIgZD0iTTEzIDkuNjRIOS44M1YxM0g4LjE1NFY5LjY0SDVWOC4xNTZoMy4xNTNWNUg5LjgzdjMuMTU2SDEzeiIvPjwvZz48L3N2Zz4K" alt="">
                 <span>Add Payment Method</span>
-            </div>
+                </div>
             </a>
             
             <div id="place_div" >
-                <button>Place Order</button>
+                <button id="form" >Place Order</button>
                 <div id="place_text" >
                     <span>By placing your order, you agree to Shopbop.com’s</span>
                     <span class="red" >privacy notice</span>
@@ -166,12 +184,13 @@
                 </div>
             </div>
         </div>
+        <!-- product data div -->
         <div id="checkout_div" >
             <h3>Order Summary</h3>
             <div id="underline_div" >
                 <div class="pro_details_div" >
-                    <span>products</span>
-                    <span>$445</span>
+                    <span id="proC" ></span>
+                    <span class="proP" ></span>
                 </div>
                 <div class="pro_details_div" >
                     <span>Shipping & Handiling</span>
@@ -179,18 +198,18 @@
                 </div>
                 <div class="pro_details_div total" >
                     <span>Total Before Import Fees</span>
-                    <span>$445</span>
+                    <span class="proP" ></span>
                 </div>
             </div>
             <div id="total_div" >
                 <span>Order Total</span>
-                <span>$445</span>
+                <span class="proP" ></span>
             </div>
             <div id="product_details" >
                 <div class="items" >
                     <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzYiIGhlaWdodD0iMzYiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48cGF0aCBkPSJNMTggMGM5Ljk0MSAwIDE4IDguMDU5IDE4IDE4IDAgNi4wMjYtMi45NjUgMTEuMzU1LTcuNTEyIDE0LjYyMWwzLjAzNy0xMS4zMzNhLjc5NS43OTUgMCAwMC0uNTU3LS45NzZsLTEuNjYtLjQ0NWEuNTU0LjU1NCAwIDAwLS4xMjEtLjMwNmwtLjAwMy0uMDA1YS41NTUuNTU1IDAgMDAtLjExNC0uMTAzbC0uMDI1LS4wMTZhLjU1NS41NTUgMCAwMC0uMTQ1LS4wNjVsLTIuMDU4LS41NTFjLjI2OS0yLjg4Mi0xLjYwNi01LjY0NC00LjU0NS02LjQzMWE1LjgwOSA1LjgwOSAwIDAwLS44ODUtLjE1OSA1Ljk2NSA1Ljk2NSAwIDAwLS45OC0uNjI3bC0uMDQzLS4wMjRhNi4xMyA2LjEzIDAgMDAtLjQ3OC0uMjExbC0uMDg2LS4wMzhhNi4xMTggNi4xMTggMCAwMC0uNTg1LS4xOWMtMS41MjctLjQwOS0zLjE0Mi0uMTgtNC41NDYuNjQ1YTYuMDcgNi4wNyAwIDAwLTIuNjIgMy4wNzhsLTQuNjMxLTEuMjQxYS41NTMuNTUzIDAgMDAtLjY3OC4zOTFMMy4wMjIgMjcuOTgzQTE3LjkxNSAxNy45MTUgMCAwMTAgMThDMCA4LjA1OSA4LjA2IDAgMTggMHpNNy42OTEgMTQuODM2bDEuOTIzLjUxNWMtLjAwOC4wMi0uMDE4LjA0LS4wMjMuMDZMNS40NDQgMzAuODlhMTguMTY0IDE4LjE2NCAwIDAxLTEuNTgzLTEuNzU3bDMuODMtMTQuMjk2em0xNS41LS4zMjFsLjE5Ni4xMzJjMS4yMTUuODY4IDEuOTQzIDIuMjc2IDEuODk4IDMuNzU3bC0xLjY4Ny0uNDUyYy4wMzItLjE3LjA1NS0uMzQuMDcyLS41MS4wMDUtLjA2LjAwOC0uMTIuMDEyLS4xODFhNS41NTggNS41NTggMCAwMC0uMDAzLS43OThjLS4wMDYtLjA4OC0uMDEyLS4xNzctLjAyMi0uMjY0LS4wMDUtLjA0My0uMDE0LS4wODUtLjAyLS4xMjdhNS44MTggNS44MTggMCAwMC0uMjc4LTEuMTM0bC0uMDEzLS4wMzZhNS43NiA1Ljc2IDAgMDAtLjE1NS0uMzg3em0tNi40NDggMS42Yy45NDctMS42MzUgMi44Ny0yLjU4NyA0Ljc1Mi0yLjI2NS44NTggMS4wNDcgMS4yNjggMi40MjcgMS4wMjkgMy44MTR6bS0xLjQ4OC0zLjM3NGMxLjE0Ny0uNjczIDIuNDYtLjg2MSAzLjY5OC0uNTMuMTU2LjA0Mi4zMDcuMDkuNDU1LjE0Ni0xLjc5OS40MTgtMy4zOSAxLjYzNy00LjIyNiAzLjM0bC0yLjAyOC0uNTQ0YTQuOTcyIDQuOTcyIDAgMDEyLjEwMS0yLjQxMnoiIGZpbGw9IiNGRkU3REIiLz48cGF0aCBkPSJNOS42MTMgMTUuMzVsMi40MzcuNjU0YS41NS41NSAwIDAwLjIyNS4xMjQuNTUxLjU1MSAwIDAwLjI1Ni4wMDVsMTAuMDIyIDIuNjg1YS41NTMuNTUzIDAgMDAuMzY5LjE0NGMuMDM1IDAgLjA2OC0uMDExLjEwMi0uMDE4bDUuMDU0IDEuMzU1LTMuOTE2IDE0LjYxOEExNy45NjMgMTcuOTYzIDAgMDExOCAzNiAxNy45MyAxNy45MyAwIDAxNS40NDQgMzAuODlMOS41OSAxNS40MWwuMDIyLS4wNnptMTkuNjk0IDQuNTE3bDEuNjYuNDQ1Yy40MjIuMTEzLjY3Mi41NS41NTguOTc2bC0zLjAzNyAxMS4zMzNhMTcuOTkxIDE3Ljk5MSAwIDAxLTMuMDM3IDEuNzYzbDMuODQtMTQuMzMzYS40OTUuNDk1IDAgMDAuMDE2LS4xODR6bS03Ljg5NS03LjYzNmwuMjk2LjAzOGMuMTk3LjAzLjM5NC4wNjguNTkuMTIgMi45MzcuNzg4IDQuODEzIDMuNTUgNC41NDQgNi40MzJsLS44NC0uMjI2LS43MTYtLjE5MWMuMDQ3LTEuNTU5LS43NjMtMy4wMzctMi4wOTUtMy44OWwtLjExNi0uMjQ1YTUuOTk1IDUuOTk1IDAgMDAtLjQxMS0uN2wtLjAxMi0uMDE2YTYuMDE3IDYuMDE3IDAgMDAtLjY4LS44MjJsLS4wMy0uMDNhNS45NzMgNS45NzMgMCAwMC0uNTMtLjQ3em0tMi4wMDQuMTI2Yy44NC4zMTMgMS41NS44NCAyLjA4NiAxLjQ5My0xLjg4MS0uMzIzLTMuODA0LjYzLTQuNzUxIDIuMjY1bC0xLjU2LS40MTljLjgzNi0xLjcwMiAyLjQyNi0yLjkyMSA0LjIyNS0zLjM0eiIgZmlsbD0iI0ZGQ0JCMSIvPjxwYXRoIGQ9Ik0yMi41MjQgMTcuNjY0bC01Ljc4LTEuNTUtMS41NjItLjQxOC0yLjAyOC0uNTQzYTQuOTcyIDQuOTcyIDAgMDEyLjEwMS0yLjQxMmMxLjE0Ny0uNjczIDIuNDYtLjg2MSAzLjY5OC0uNTNhNC45MTQgNC45MTQgMCAwMTIuNTQxIDEuNjM5Yy44NTkgMS4wNDcgMS4yNjkgMi40MjcgMS4wMyAzLjgxNG02Ljc4MyAyLjIwM2EuNTUzLjU1MyAwIDAwLS4xMi0uMzA2bC0uMDAzLS4wMDVhLjUzOC41MzggMCAwMC0uMTE0LS4xMDNsLS4wMjYtLjAxNmEuNTQ5LjU0OSAwIDAwLS4xNDQtLjA2NWwtMi4wNTktLjU1MS0uODQtLjIyNi0uNzE2LS4xOTEtMS42ODctLjQ1MmMuMDMzLS4xNy4wNTUtLjM0LjA3Mi0uNTEuMDA1LS4wNi4wMDgtLjEyLjAxMi0uMTgxYTUuNTU2IDUuNTU2IDAgMDAtLjAwMy0uNzk4Yy0uMDA2LS4wODgtLjAxMi0uMTc3LS4wMjItLjI2NC0uMDA1LS4wNDMtLjAxNC0uMDg1LS4wMi0uMTI3YTUuODMzIDUuODMzIDAgMDAtLjI3OC0xLjEzNGwtLjAxMy0uMDM2YTUuOTYgNS45NiAwIDAwLTEuMzc0LTIuMTcxbC0uMDMtLjAzYTYuMDgzIDYuMDgzIDAgMDAtMS4wMTUtLjgxNGwtLjAwMy0uMDAzYTYuMTQ3IDYuMTQ3IDAgMDAtLjQ5Mi0uMjhsLS4wNDMtLjAyNGE1LjkzNCA1LjkzNCAwIDAwLS40NzgtLjIxMWMtLjAzLS4wMTItLjA1Ny0uMDI2LS4wODYtLjAzOGE2LjExOCA2LjExOCAwIDAwLS41ODUtLjE5Yy0xLjUyNy0uNDA5LTMuMTQxLS4xOC00LjU0Ni42NDVhNi4wNjkgNi4wNjkgMCAwMC0yLjYyIDMuMDc4bC00LjYzMS0xLjI0MWEuNTUzLjU1MyAwIDAwLS42NzguMzkxTDMuMDIyIDI3Ljk4M2MuMjY0LjM5NS41NDUuNzc3LjgzOSAxLjE1bDMuODMtMTQuMjk3IDEuOTIzLjUxNSAyLjQzNi42NTNjLjA2My4wNTYuMTM4LjEuMjI1LjEyNGEuNTUuNTUgMCAwMC4yNTYuMDA1bDEwLjAyMiAyLjY4NWEuNTUzLjU1MyAwIDAwLjM2OS4xNDRjLjAzNSAwIC4wNjgtLjAxMS4xMDItLjAxOEwyOC4wOCAyMC4zbC0zLjkxNyAxNC42MThjLjQzOC0uMTYuODY3LS4zNCAxLjI5LS41MzNsMy44NC0xNC4zMzRhLjUzNS41MzUgMCAwMC4wMTUtLjE4MyIgZmlsbD0iIzAwMCIvPjwvZz48L3N2Zz4=" >
-                    <span class="bolder" >In Your Bag</span>
-                    <span>-3 Items</span>
+                    <span class="bolder" >In Your Bag </span>
+                    <span id="bagIt" ></span>
                 </div>
                 <div id="products" >
 
@@ -207,8 +226,66 @@
     import {navbar} from "./components/navbar.js";
     import {footer} from "./components/footer.js";
     
-    console.log(footer);
+    //console.log(footer);
     document.querySelector("#navbar").innerHTML=navbar()
     document.querySelector("#footer").innerHTML=footer();
+
+
+    let arr=JSON.parse(localStorage.getItem("addToCartData"));
+    console.log(arr)
+
+    let proC=document.querySelector("#proC").innerText=`Products(${arr.length})`;
+    let totalprice=0;
+    for (let x=0;x<arr.length;x++){
+        totalprice+=Number(arr[x].price);
+    }
+    let proP=document.querySelectorAll(".proP")
+    //console.log(proP)
+    for (let x=0;x<proP.length;x++){
+        proP[x].innerText=`$${totalprice}`
+    }
+
+    document.querySelector("#bagIt").innerText=` -${arr.length} Items`
+    let container=document.querySelector("#products");
+    arr.map((ele)=>{
+        let main_div=document.createElement("div");
+        let img=document.createElement("img");
+        img.src=ele.images;
+        let datadiv=document.createElement("div");
+        let name=document.createElement("h3");
+        name.innerText=ele.title;
+        let dis=document.createElement("p");
+        dis.innerText=ele.description;
+        let pri=document.createElement("h4");
+        pri.innerText=`$${ele.price}`
+        datadiv.append(name,dis,pri)
+        main_div.append(img,datadiv);
+        container.append(main_div)
+        
+    })
+
+    let addre=JSON.parse(localStorage.getItem("addr"));
+    console.log(addre)
+    if (addre!=null){
+        let div=document.querySelector("#add");
+        div.innerHTML=null;
+        let span1=document.createElement("span");
+        span1.innerText=`${addre.name}-`;
+        span1.setAttribute("class","addbold")
+        let span2=document.createElement("span");
+        span2.innerText=addre.add;
+        div.append(span1,span2)
+        
+    }
+
+    let form=document.querySelector("#form");
+    
+    let MyCode=()=>{
+        event.preventDefault();
+        alert("your order has been placed successfully!")
+        window.location.href="./index.html"
+    }
+    form.addEventListener("click",MyCode);
+    //proP.innerText=
 </script>
 
