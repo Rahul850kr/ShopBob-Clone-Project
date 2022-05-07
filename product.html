@@ -33,6 +33,9 @@
             height: 200px;
             width: 200px;
         }
+        #mainbox{
+            text-align: center;
+        }
     </style>
 </head>
 
@@ -541,7 +544,7 @@
             Title.innerText = elem.title;
 
             let Price = document.createElement("p");
-            Price.innerText = elem.price;
+            Price.innerText = `$ ${elem.price}`;
             
             let Description = document.createElement("p");
             Description.innerText = elem.description;

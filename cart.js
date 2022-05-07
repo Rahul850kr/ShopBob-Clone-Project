@@ -38,6 +38,9 @@ var data1 = JSON.parse(localStorage.getItem("addToCartData"));
 
 console.log(data1)
 
+let len = data1.length;
+document.getElementById("count").innerText=len;
+
 let append = (data1)=>{
     data1.map((el,i)=>{
 
@@ -108,7 +111,7 @@ let append = (data1)=>{
 function removeItem(el,i)
 {
     data1.splice(i,1);
-    localStorage.setItem("cartData",JSON.stringify(data1));
+    localStorage.setItem("addToCartData",JSON.stringify(data1));
     window.location.reload();
 }
 
@@ -278,4 +281,6 @@ function recommend(data)
         })
     
 }
+
+
 
