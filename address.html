@@ -114,7 +114,7 @@
     <h1>ADD ADDRESS</h1>
 
     <div id="main_div" >
-        <form onsubmit="MyCode()" >
+        <form >
             <div class="names" >
                 <span>Country</span>
             </div>
@@ -440,7 +440,22 @@
 <script type="module" >
     import {navbar} from "./components/navbar.js";
     import {footer} from "./components/footer.js";
-    console.log(navbar);
+    //console.log(navbar);
     document.querySelector("#navbar").innerHTML=navbar()
     document.querySelector("#footer").innerHTML=footer();
+
+    let form=document.querySelector("form");
+    
+    let MyCode=()=>{
+        event.preventDefault();
+        let obj={
+        name:form.name.value,
+        add:form.address.value,
+        }
+        console.log(obj);
+        localStorage.setItem("addr",JSON.stringify(obj))
+        window.location.href="./checkout.html"
+    }
+    form.addEventListener("submit",MyCode);
+
 </script>
