@@ -117,6 +117,6 @@
             localStorage.setItem("users", JSON.stringify(users));
             localStorage.removeItem("usersTemp");
             alert("Your account has been created successfully.");
-            location.replace("Shopbop Sign In.html");
+            location.replace("signin.html");
         }
     }
