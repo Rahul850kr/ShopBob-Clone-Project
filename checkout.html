@@ -240,7 +240,7 @@ let len = data1.length;
 document.getElementById("count").innerText=len;
 
 
-    let arr=JSON.parse(localStorage.getItem("addToCartData"));
+    let arr=JSON.parse(localStorage.getItem("addToCartData")) || [];
     console.log(arr)
 
     let proC=document.querySelector("#proC").innerText=`Products(${arr.length})`;

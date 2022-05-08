@@ -128,7 +128,7 @@
     console.log(navbar);
     document.querySelector("#navbar").innerHTML=navbar();
     document.querySelector("#footer").innerHTML=footer();
-    var data1 = JSON.parse(localStorage.getItem("addToCartData"));
+    var data1 = JSON.parse(localStorage.getItem("addToCartData")) || [];
 
 console.log(data1)
 

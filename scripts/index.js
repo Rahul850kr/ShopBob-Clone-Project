@@ -2,7 +2,7 @@
 import { navbar } from "../components/navbar.js";
 let n=document.getElementById("navbar");
 n.innerHTML=navbar();
-var data1 = JSON.parse(localStorage.getItem("addToCartData"));
+var data1 = JSON.parse(localStorage.getItem("addToCartData")) || [];
 
 console.log(data1)
 

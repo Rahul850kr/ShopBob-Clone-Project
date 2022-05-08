@@ -34,7 +34,7 @@ document.getElementById("navbar").innerHTML = navbar();
 
 document.getElementById("apply").addEventListener("click",promocode);
 
-var data1 = JSON.parse(localStorage.getItem("addToCartData"));
+var data1 = JSON.parse(localStorage.getItem("addToCartData")) || [];
 
 console.log(data1)
 

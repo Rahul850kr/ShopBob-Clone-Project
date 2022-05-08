@@ -9,7 +9,7 @@ import {footer} from "../components/footer.js"
 
 document.getElementById("footer").innerHTML=footer()
 
-var data1 = JSON.parse(localStorage.getItem("addToCartData"));
+var data1 = JSON.parse(localStorage.getItem("addToCartData")) || [];
 
 console.log(data1)
 
@@ -79,9 +79,9 @@ const swiper = new Swiper('.swiper', {
 function addToBag(e){
 
     adItems.push(e)
-
+    alert("Item added to cart");
     localStorage.setItem("addToCartData",JSON.stringify(adItems));
-   
+   window.location.reload();
 
 }
 

@@ -498,7 +498,12 @@
         
     ];
     
-    
+    var data1 = JSON.parse(localStorage.getItem("addToCartData")) || [];
+
+console.log(data1)
+
+let len = data1.length;
+document.getElementById("count").innerText=len;
     
     let items_data = JSON.parse(localStorage.getItem("items")) || [];
     
