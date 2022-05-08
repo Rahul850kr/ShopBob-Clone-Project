@@ -9,6 +9,13 @@ import {footer} from "../components/footer.js"
 
 document.getElementById("footer").innerHTML=footer()
 
+var data1 = JSON.parse(localStorage.getItem("addToCartData"));
+
+console.log(data1)
+
+let len = data1.length;
+document.getElementById("count").innerText=len;
+
 let adItems=JSON.parse(localStorage.getItem("addToCartData"))||[]
 console.log(adItems)
 

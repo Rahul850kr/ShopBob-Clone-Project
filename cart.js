@@ -179,6 +179,7 @@ function promocode()
     }
 
     document.getElementById("totalPrice").innerText=Math.floor(sum);
+    localStorage.setItem("finalprice",Math.floor(sum));
 
     document.getElementById("promo").value=null;
 }

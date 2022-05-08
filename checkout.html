@@ -231,6 +231,9 @@
     document.querySelector("#footer").innerHTML=footer();
     var data1 = JSON.parse(localStorage.getItem("addToCartData"));
 
+    let finalprice=localStorage.getItem("finalprice");
+
+
 console.log(data1)
 
 let len = data1.length;
@@ -248,7 +251,7 @@ document.getElementById("count").innerText=len;
     let proP=document.querySelectorAll(".proP")
     //console.log(proP)
     for (let x=0;x<proP.length;x++){
-        proP[x].innerText=`$${totalprice}`
+        proP[x].innerText=`$${finalprice}`
     }
 
     document.querySelector("#bagIt").innerText=` -${arr.length} Items`
@@ -293,5 +296,7 @@ document.getElementById("count").innerText=len;
     }
     form.addEventListener("click",MyCode);
     //proP.innerText=
+
+    
 </script>
 
