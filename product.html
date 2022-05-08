@@ -36,12 +36,37 @@
         #mainbox{
             text-align: center;
         }
+        #filter{
+            height: 100px;
+            width: 80%;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            /* border: 1px solid red; */
+        }
+        #filterprice{
+            height: 28px;
+            width: 180px;
+            border-radius: 10px;
+            margin-left: 10px;
+            border: 1px solid #db3b14;
+        }
     </style>
 </head>
 
 <body>
     <div id="navbar">
 
+    </div>
+    <div id="filter">
+        <label>Filter By Relevant :</label>
+        <select id="filterprice">
+            <option value="">select</option>
+            <option value="HTL">PRICE: HIGH TO LOW</option>
+            <option value="LTH">PRICE: LOW TO HIGH</option>
+            <option value="ATZ">TITLE: A TO Z</option>
+            <option value="ZTA">TITLE: Z TO A</option>
+        </select>
     </div>
     <div id="prod_container">
 
@@ -344,7 +369,6 @@
             price: 367.00,
             description:
                 "Tilly Tunic Dress"
-
         },
 
     ];
@@ -539,7 +563,9 @@ document.getElementById("count").innerText=len;
     
     appendData(prod_data)
     function appendData(data) {
+        document.querySelector("#prod_container").innerHTML=null;
         data.map(function (elem) {
+            
             let box = document.createElement("div");
             box.setAttribute("id", "mainbox")
             
@@ -572,6 +598,50 @@ document.getElementById("count").innerText=len;
         items_data.push(elem);
         localStorage.setItem("items", JSON.stringify(items_data));
         window.location.href = "./U4_project/description.html"
+    }
+
+
+    document.getElementById("filterprice").addEventListener("change",sortbyprice);
+
+    function sortbyprice()
+    {
+        let selected = document.getElementById("filterprice").value;
+
+        if(selected === "select")
+        {
+            return elem;
+        }
+        if(selected == "HTL")
+        {
+            var filteredlist = prod_data.sort(function(a,b){
+                return b.price - a.price;
+            })
+            
+        }
+        if(selected == "LTH")
+        {
+            var filteredlist = prod_data.sort(function(a,b){
+                return a.price - b.price;
+            })
+        }
+        if(selected === "ATZ")
+        {
+            var filteredlist = prod_data.sort(function(a,b){
+                if (a.title>b.title) return 1;
+                if(b.title>a.title) return -1;
+                return 0; 
+            })
+        }
+        if(selected === "ZTA")
+        {
+            var filteredlist = prod_data.sort(function(a,b){
+                if (a.title>b.title) return -1;
+                if(b.title>a.title) return 1;
+                return 0; 
+            })
+        }
+
+        appendData(filteredlist)
     }
     
 

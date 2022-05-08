@@ -1,9 +1,9 @@
 function navbar(){
     return ` <div id="nav1">
     <div id="sec1">
-        <h3 id="i"><i class="material-icons" >&#xe55f;</i>IN<i class="fa-solid fa-angle-down"></i></h3>
+        <h3 id="i"><i class="material-icons" >&#xe55f;</i>UK<i class="fa-solid fa-angle-down"></i></h3>
         <h3>EN<i class="fa-solid fa-angle-down"></i></h3>
-        <h3>₹INR<i class="fa-solid fa-angle-down"></i></h3>
+        <h3>$Dollar<i class="fa-solid fa-angle-down"></i></h3>
     </div>
     <div id="sec2"><p>FREE express international delivery + EASY returns</p></div>
     <div class="dropmenu">
