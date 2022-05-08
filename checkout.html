@@ -229,7 +229,7 @@
     //console.log(footer);
     document.querySelector("#navbar").innerHTML=navbar()
     document.querySelector("#footer").innerHTML=footer();
-    var data1 = JSON.parse(localStorage.getItem("addToCartData"));
+    var data1 = JSON.parse(localStorage.getItem("addToCartData"))||[];
 
     let finalprice=localStorage.getItem("finalprice");
 
