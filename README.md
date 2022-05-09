@@ -8,7 +8,7 @@ Hello Everyone !🌏 We are Masaiians from Web17 batch and we are presenting our
 
 Shopbop is a US online fashion apparel and accessories shop opened in 1999. It has been a subsidiary of Amazon.com since 2006.
 
-🚀 The link for the same is here : https://enchanting-banoffee-050dd5.netlify.app/
+🚀 The link for the same is here : https://www.shopbop.com/
 
 
 ## Team Members 👨‍💻 :
@@ -79,11 +79,6 @@ Shopbop is a US online fashion apparel and accessories shop opened in 1999. It h
 - Description page is designed and functioned by Ashish Kumar Chaudhary.
 - Cart page and Final page and its full functionality is designed by Rahul Kumar.
 - Checkout section(Address and Payment) and its full functionality is designed by Shivam.
-
-
-
-
-
     
 ## Lessons Learned
 
@@ -93,5 +88,17 @@ Shopbop is a US online fashion apparel and accessories shop opened in 1999. It h
 - Our skills in JavaScript and DOM manipulation became better.
 - We all learned how to plan a project and execute that in a limited time frame.
 
+### Netlify link of the Project:  https://enchanting-banoffee-050dd5.netlify.app/
 
+### LinkedIn Profile link of the Team Members:
+- #### Rahul Kumar : https://www.linkedin.com/in/rahul-kumar-a76323230/
+- #### Alisha Mohasin P K : https://www.linkedin.com/in/alisha-mohasin-89076b1b8/
+- #### Ashish Kumar Chaudhary: https://www.linkedin.com/in/ashish-chaudhary-216b23186
+- #### Saurabh Kumar : https://www.linkedin.com/in/saurabh-kumar-singh-813780234/
+- #### Shivam : www.linkedin.com/in/shivam-2002-rajput
+- #### Sreehari Surabind : https://www.linkedin.com/in/sree4hary/
 
+### Github Repository : https://github.com/Rahul850kr/ShopBob-Clone-Project
+
+### Medium Blog Link :
+- Rahul kumar : https://medium.com/@rahul850kr/collaborative-project-at-masai-school-shopbop-clone-project-bf3c9991a4b8
