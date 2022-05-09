@@ -77,7 +77,7 @@ Shopbop is a US online fashion apparel and accessories shop opened in 1999. It h
 -  login/signup page is designed and functioned by Sreehari Surabind.
 - Product page is designed and functioned by Saurabh Kumar.
 - Description page is designed and functioned by Ashish Kumar Chaudhary.
-- Cart page and Final page and its full functionality is designe by Rahul Kumar.
+- Cart page and Final page and its full functionality is designed by Rahul Kumar.
 - Checkout section(Address and Payment) and its full functionality is designed by Shivam.
 
 
